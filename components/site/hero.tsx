@@ -2,81 +2,90 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-14 pt-8 md:pb-20 md:pt-10">
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1920&q=80')",
-        }}
-      />
-      <div className="hero-overlay absolute inset-0 -z-10" />
-      <div className="section-shell grid min-h-[72vh] gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
-        <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
-          <p className="mb-5 inline-flex rounded-full border border-blue-200/30 bg-blue-500/15 px-3 py-1 text-xs uppercase tracking-[0.14em] text-blue-100">
-            Final Year Project Command Center
-          </p>
-          <h1 className="text-4xl font-semibold leading-[1.04] text-white md:text-7xl" style={{ fontFamily: "var(--font-sora), sans-serif", letterSpacing: "-0.03em" }}>
-            Struggling with Your Final Year Project?
-          </h1>
-          <p className="mt-6 max-w-2xl text-base text-zinc-200 md:text-xl">
-            I help ICT students build real-world ML, Mobile, Web & DevOps systems ready for submission and demo.
-          </p>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {[
-              "React",
-              "Firebase",
-              "AWS",
-              "Docker",
-            ].map((tech) => (
-              <span key={tech} className="rounded-full border border-blue-100/25 bg-white/10 px-3 py-1 text-xs font-semibold text-zinc-100">
-                {tech}
-              </span>
-            ))}
+    <section className="section-shell py-7 md:py-10">
+      <div className="grid min-h-[80vh] grid-cols-1 gap-4 md:grid-cols-[1.2fr_0.95fr]">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
+          className="glass-panel mesh-border relative flex flex-col justify-between overflow-hidden p-7 md:p-12"
+        >
+          <span className="orbital-dot left-8 top-8 h-3 w-3" />
+          <span className="orbital-dot right-12 top-24 h-2 w-2 [animation-delay:1.2s]" />
+          <div>
+            <p className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-[color:var(--accent-soft)] px-4 py-1 text-xs uppercase tracking-[0.16em] text-[color:var(--accent)]">
+              <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--accent)]" /> Experimental Product Studio
+            </p>
+            <h1 className="mt-9 max-w-xl text-5xl leading-[0.92] text-[color:var(--text-primary)] md:text-7xl" style={{ fontFamily: "var(--font-display), serif" }}>
+              Design That Feels
+              <span className="block text-[color:var(--accent)]">Impossible To Ignore</span>
+              <span className="block">And Hard To Replicate</span>
+            </h1>
+            <p className="mt-6 max-w-md text-sm uppercase tracking-[0.12em] text-[color:var(--text-muted)] md:text-base">
+              Strategy, UI Direction, Product Engineering, Launch Systems
+            </p>
+            <p className="mt-9 max-w-xl text-lg leading-relaxed text-[color:var(--text-muted)]">
+              Your part-time service brand can look premium and feel unmistakable. I combine advanced UI language,
+              practical UX flow, and production-grade code to build high-converting digital experiences.
+            </p>
           </div>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <Link href="/contact">Start Your Project</Link>
+
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Button asChild size="lg" className="cut-button px-10">
+              <Link href="/#work">Explore Build Cases</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/#portfolio">
-                View My Work <ArrowUpRight className="ml-1 h-4 w-4" />
-              </Link>
+            <Button asChild size="lg" variant="outline" className="border-[color:var(--line)] bg-[#11162f]/70">
+              <a href="https://wa.me/94722382901" target="_blank" rel="noreferrer">
+                Book Discovery <ArrowUpRight className="ml-1 h-4 w-4" />
+              </a>
             </Button>
           </div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="glass-card p-4 md:p-6"
+          className="glass-panel relative overflow-hidden p-5 md:p-6"
         >
-          <div className="space-y-4 rounded-2xl border border-blue-100/15 bg-[#0b1429]/85 p-5">
-            <div className="rounded-2xl border border-blue-100/20 bg-black/25 p-3">
-              <div
-                className="h-52 rounded-xl bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(180deg, rgba(5,8,20,0.12), rgba(5,8,20,0.62)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80')",
-                }}
-              />
+          <div className="absolute -left-12 top-28 h-40 w-40 rounded-full border border-[color:var(--accent)]/35" />
+          <div className="absolute right-8 top-8 h-12 w-12 rotate-12 rounded-2xl border border-[color:var(--accent-2)]/60 bg-[#1b203e]/70" />
+          <div
+            className="h-[320px] rounded-2xl border border-[color:var(--line)] bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "linear-gradient(180deg, rgba(7, 20, 33, 0.2), rgba(7, 20, 33, 0.62)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80')",
+            }}
+          />
+
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-[color:var(--line)] bg-[#131933] p-4">
+              <p className="text-3xl font-semibold text-[color:var(--accent)]">48h</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.1em] text-[color:var(--text-muted)]">First draft turnaround</p>
             </div>
-            <div className="relative rounded-2xl border border-blue-200/25 bg-blue-500/12 p-3 md:ml-16">
-              <div
-                className="h-36 rounded-xl bg-cover bg-center"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(180deg, rgba(2,7,20,0.22), rgba(2,7,20,0.68)), url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80')",
-                }}
-              />
-              <p className="mt-2 text-xs uppercase tracking-[0.12em] text-blue-100">Live project UI preview</p>
+            <div className="rounded-xl border border-[color:var(--line)] bg-[#131933] p-4">
+              <p className="text-3xl font-semibold text-[color:var(--accent)]">32+</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.1em] text-[color:var(--text-muted)]">Client projects delivered</p>
             </div>
+            <div className="rounded-xl border border-[color:var(--line)] bg-[#131933] p-4">
+              <p className="text-3xl font-semibold text-[color:var(--accent)]">5.0</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.1em] text-[color:var(--text-muted)]">Average client rating</p>
+            </div>
+          </div>
+
+          <div className="mt-5 rounded-2xl border border-[color:var(--line)] bg-[color:var(--bg-elevated)] p-5">
+            <p className="text-xs uppercase tracking-[0.16em] text-[color:var(--accent-2)]">What you get</p>
+            <p className="mt-2 text-sm leading-relaxed text-[color:var(--text-muted)]">
+              Art-directed UI systems, conversion UX, custom build architecture, and delivery operations tailored to your business.
+            </p>
+            <p className="mt-5 inline-flex items-center gap-2 text-xs uppercase tracking-[0.14em] text-[color:var(--accent)]">
+              <Sparkles className="h-3.5 w-3.5" /> Visual originality with measurable business outcomes
+            </p>
           </div>
         </motion.div>
       </div>

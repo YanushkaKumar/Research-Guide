@@ -4,74 +4,74 @@ export type ServiceIcon = "brain" | "smartphone" | "globe" | "infinity";
 
 export const services: { title: string; description: string; icon: ServiceIcon }[] = [
   {
-    title: "Machine Learning",
-    description: "Predictive analytics, classification, recommendation systems, and practical AI project delivery.",
+    title: "Business Websites",
+    description: "Fast, conversion-first websites for small businesses with clear service pages, inquiry flows, and performance optimization.",
     icon: "brain",
   },
   {
-    title: "Mobile Application",
-    description: "Android and cross-platform apps with clean UX, scalable APIs, and production-ready quality.",
+    title: "Mobile App MVP",
+    description: "Lean mobile MVP development for service startups that need to validate ideas quickly without burning budget.",
     icon: "smartphone",
   },
   {
-    title: "Web Application",
-    description: "Responsive web systems, dashboards, admin panels, and robust backend integrations.",
+    title: "AI Feature Integration",
+    description: "Practical AI features like chat assistants, smart search, and recommendation logic integrated into existing products.",
     icon: "globe",
   },
   {
-    title: "DevOps",
-    description: "CI/CD, Docker workflows, cloud deployment, and observability for stable releases.",
+    title: "Automation + DevOps",
+    description: "Deployment pipelines, cloud setup, monitoring, and workflow automation to reduce manual effort and downtime.",
     icon: "infinity",
   },
 ];
 
 export const strengths = [
-  "Real-world project architecture",
-  "Industry-level coding standards",
-  "On-time delivery",
-  "Full support until submission",
+  "Clear weekly updates and transparent progress tracking",
+  "Design-first screens before development begins",
+  "Clean codebase handover with documentation",
+  "Affordable engagement plans for part-time execution",
 ];
 
 export const processSteps = [
-  "Discuss requirement",
-  "Plan solution",
-  "Develop project",
-  "Deliver & support",
+  "Discovery call and scope locking",
+  "Wireframe, UI direction, and implementation plan",
+  "Build with milestone demos and feedback loops",
+  "Deployment, training, and support window",
 ];
 
 export const pricingPlans = [
   {
-    name: "Basic",
-    subtitle: "Guidance",
-    price: "LKR 15,000+",
+    name: "Starter",
+    subtitle: "Single Service Site",
+    price: "LKR 35,000+",
     features: [
-      "Topic and architecture guidance",
-      "Documentation support",
-      "Report writing guidance",
+      "Up to 5 responsive pages",
+      "Lead capture form with WhatsApp flow",
+      "Speed and SEO basics",
     ],
     featured: false,
   },
   {
-    name: "Standard",
-    subtitle: "Project + Support",
-    price: "LKR 45,000+",
+    name: "Growth",
+    subtitle: "Business App + Website",
+    price: "LKR 85,000+",
     features: [
-      "Project implementation",
-      "Documentation support",
-      "Deployment help",
-      "Report writing guidance",
+      "Website plus dashboard or booking module",
+      "Database and admin panel",
+      "Cloud deployment and monitoring",
+      "30-day support window",
     ],
     featured: true,
   },
   {
-    name: "Premium",
-    subtitle: "Full Solution + Report Help",
-    price: "LKR 75,000+",
+    name: "Scale",
+    subtitle: "Automation + AI",
+    price: "LKR 140,000+",
     features: [
-      "Full project delivery",
-      "Deployment help",
-      "Research report assistance",
-      "Priority support",
+      "AI feature integration",
+      "CI/CD and release automation",
+      "Analytics and reporting stack",
+      "Priority delivery lane",
     ],
     featured: false,
   },
@@ -79,35 +79,36 @@ export const pricingPlans = [
 
 export const testimonials = [
   {
-    name: "Nipuni S.",
-    role: "BICT Undergraduate",
+    name: "Tharushi R.",
+    role: "Salon Owner",
     quote:
-      "The project was structured like an industry product. I got excellent feedback from my supervisors and delivered on time.",
+      "Our bookings doubled after the new website launch. The process was simple and every change request was handled fast.",
   },
   {
-    name: "Dulaj P.",
-    role: "Software Engineering Student",
+    name: "Nadeesh K.",
+    role: "Tuition Center Manager",
     quote:
-      "Clear communication and professional execution. The architecture and documentation made my final presentation easy.",
+      "The admin dashboard gave us full control over inquiries and schedules. Reliable delivery and clean communication.",
   },
   {
-    name: "Rashmi K.",
-    role: "Computing Student",
+    name: "Ayomi L.",
+    role: "Startup Co-Founder",
     quote:
-      "From planning to final submission, everything was smooth. The support after delivery was very reliable.",
+      "We started with a simple MVP and now have an automated release setup. Great value for a part-time partnership.",
   },
 ];
 
 export const navItems = [
   { label: "Services", href: "/#services" },
-  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Work", href: "/#work" },
+  { label: "Process", href: "/#process" },
   { label: "Pricing", href: "/#pricing" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const projectTypes: ProjectType[] = [
-  "Machine Learning",
-  "Mobile Application",
-  "Web Application",
-  "DevOps",
+  "Business Website",
+  "Mobile App MVP",
+  "AI Feature",
+  "Automation Setup",
 ];

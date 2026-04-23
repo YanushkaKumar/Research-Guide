@@ -1,19 +1,28 @@
 import type { Metadata } from "next";
-import { Manrope, Sora } from "next/font/google";
+import { Cormorant_Garamond, Space_Mono, Syne } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
-const sora = Sora({ subsets: ["latin"], variable: "--font-sora" });
+const syne = Syne({ subsets: ["latin"], variable: "--font-sans" });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["400", "500", "600", "700"],
+});
+const mono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "700"],
+});
 
 export const metadata: Metadata = {
-  title: "Final Year Project Solutions for ICT Students",
+  title: "Quantum Build Lab | Advanced UI and Product Systems",
   description:
-    "Modern final year project solutions for ICT students across Machine Learning, Mobile App, Web App, and DevOps.",
+    "A high-concept digital studio delivering bold interface systems, conversion UX, and production-ready engineering.",
   metadataBase: new URL("https://final-year-ict-solutions.vercel.app"),
   openGraph: {
-    title: "Final Year Project Solutions for ICT Students",
+    title: "Quantum Build Lab | Advanced UI and Product Systems",
     description:
-      "Professional project services with startup-grade quality, confidentiality, and on-time delivery.",
+      "Distinctive UI direction fused with robust engineering for service businesses and product teams.",
     type: "website",
   },
 };
@@ -25,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${sora.variable} antialiased`}>
+      <body className={`${syne.variable} ${cormorant.variable} ${mono.variable} antialiased`}>
         {children}
       </body>
     </html>

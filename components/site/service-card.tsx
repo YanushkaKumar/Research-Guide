@@ -23,15 +23,18 @@ export function ServiceCard({ title, description, icon }: ServiceCardProps) {
 
   return (
     <motion.div whileHover={{ y: -6, scale: 1.01 }} transition={{ duration: 0.2 }}>
-      <Card className="h-full">
+      <Card className="mesh-border h-full">
         <CardHeader>
-          <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-blue-300/25 bg-blue-500/15 text-blue-100">
+          <div className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl border border-[color:var(--line)] bg-[linear-gradient(130deg,rgba(107,242,255,0.18),rgba(255,138,91,0.18))] text-[color:var(--accent)]">
             <Icon className="h-5 w-5" />
           </div>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="text-3xl leading-[0.95]" style={{ fontFamily: "var(--font-display), serif" }}>
+            {title}
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-sm leading-relaxed text-zinc-300">{description}</p>
+          <p className="text-sm leading-relaxed text-[color:var(--text-muted)]">{description}</p>
+          <p className="mt-4 text-[10px] uppercase tracking-[0.16em] text-[color:var(--accent-3)]">Tailored Delivery Track</p>
         </CardContent>
       </Card>
     </motion.div>

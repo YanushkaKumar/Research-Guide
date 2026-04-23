@@ -1,4 +1,4 @@
-export type ProjectType = "Machine Learning" | "Mobile Application" | "Web Application" | "DevOps";
+export type ProjectType = "Business Website" | "Mobile App MVP" | "AI Feature" | "Automation Setup";
 
 export interface LeadInput {
   name: string;
